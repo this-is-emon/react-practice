@@ -6,7 +6,11 @@ function UpdaterFunction() {
   const [age, setAge] = useState(55);
 
   function ageUpdater() {
-    setAge(age + 1);
+    //Wrong Approach
+    // setAge(age + 1);
+
+    //Correct Approach
+    setAge((age) => age + 1);
   }
   return (
     <>
@@ -14,6 +18,8 @@ function UpdaterFunction() {
       <button type="button" onClick={() => ageUpdater()}>
         +1
       </button>
+      <br />
+      <br />
       <button
         type="button"
         onClick={() => {
