@@ -1,7 +1,9 @@
 //import Counter from "./components/Counter/counter";
 //import ObjectInUseState from "./components/ObjectInUseState";
 
-import Checkbox from "./components/Chekbox/Checkbox";
+import Form from "./components/Form/Form";
+
+//import Checkbox from "./components/Chekbox/Checkbox";
 
 //import InputText from "./components/InputText/InputText";
 
@@ -11,7 +13,8 @@ function App() {
       {/* <ObjectInUseState /> */}
       {/* <Counter /> */}
       {/* <InputText /> */}
-      <Checkbox />
+      {/* <Checkbox /> */}
+      <Form />
     </>
   );
 }
