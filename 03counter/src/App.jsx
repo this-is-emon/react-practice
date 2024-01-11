@@ -1,9 +1,11 @@
-import ObjectInUseState from "./components/ObjectInUseState/ObjectInUseState";
+import Counter from "./components/Counter/counter";
+//import ObjectInUseState from "./components/ObjectInUseState";
 
 function App() {
   return (
     <>
-      <ObjectInUseState />
+      {/* <ObjectInUseState /> */}
+      <Counter />
     </>
   );
 }
