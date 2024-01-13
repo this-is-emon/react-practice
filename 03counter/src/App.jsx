@@ -1,7 +1,8 @@
 //import Counter from "./components/Counter/counter";
 //import ObjectInUseState from "./components/ObjectInUseState";
 
-import UpdaterFunction from "./components/UpdaterFunction/UpdaterFunction";
+import Form_object from "./components/Object/Form_object";
+//import UpdaterFunction from "./components/UpdaterFunction/UpdaterFunction";
 
 //import Form from "./components/Form/Form";
 
@@ -17,7 +18,8 @@ function App() {
       {/* <InputText /> */}
       {/* <Checkbox /> */}
       {/* <Form /> */}
-      <UpdaterFunction />
+      {/* <UpdaterFunction /> */}
+      <Form_object />
     </>
   );
 }
