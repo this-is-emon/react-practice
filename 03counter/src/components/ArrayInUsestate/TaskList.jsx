@@ -2,11 +2,24 @@
 import React from "react";
 import SingleTask from "./SingleTask";
 
-function TaskList() {
+// eslint-disable-next-line react/prop-types
+function TaskList({ toDos, onEditToDo, onDeleteToDo }) {
   return (
     <>
-      TaskList :
-      <SingleTask />
+      <ul>
+        {
+          // eslint-disable-next-line react/prop-types
+          toDos.map((todo) => {
+            <li key={todo.id}>
+              <SingleTask
+                todo={todo}
+                onEdit={onEditToDo}
+                onDelete={onDeleteToDo}
+              />
+            </li>;
+          })
+        }
+      </ul>
     </>
   );
 }

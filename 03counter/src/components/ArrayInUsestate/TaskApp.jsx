@@ -25,9 +25,21 @@ function TaskApp() {
     ]);
   }
 
-  function handleEditToDo() {}
+  function handleEditToDo(nextToDo) {
+    setToDos(
+      toDos.map((t) => {
+        if (nextToDo.id === t.id) {
+          return nextToDo;
+        } else {
+          return t;
+        }
+      })
+    );
+  }
 
-  function handleDeleteToDo() {}
+  function handleDeleteToDo(toDoId) {
+    setToDos(toDos.filter((t) => t.id !== toDoId));
+  }
 
   return (
     <>
@@ -36,7 +48,7 @@ function TaskApp() {
       <br />
       <br />
       <TaskList
-        todos={toDos}
+        toDos={toDos}
         onEditToDo={handleEditToDo}
         onDeleteToDo={handleDeleteToDo}
       />
