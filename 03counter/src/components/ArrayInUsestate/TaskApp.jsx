@@ -4,21 +4,39 @@ import AddToDo from "./AddToDo";
 import TaskList from "./TaskList";
 
 let nextId = 3;
-const initialTodos = [
+const initialToDos = [
   { id: 0, title: "Buy milk", done: true },
   { id: 1, title: "Eat tacos", done: false },
   { id: 2, title: "Brew tea", done: false },
 ];
 
 function TaskApp() {
-  const [todos, setTodos] = useState(initialTodos);
+  const [toDos, setToDos] = useState(initialToDos);
+
+  //handler functions
+  function handleAddToDo(title) {
+    setToDos([
+      ...toDos,
+      {
+        id: nextId++,
+        title: title,
+        done: false,
+      },
+    ]);
+  }
+
+  function handleEditToDo() {}
+
+  function handleDeleteToDo() {}
 
   return (
     <>
       <h1>To Do App</h1>
       <AddToDo onAddToDo={handleAddToDo} />
+      <br />
+      <br />
       <TaskList
-        todos={todos}
+        todos={toDos}
         onEditToDo={handleEditToDo}
         onDeleteToDo={handleDeleteToDo}
       />
